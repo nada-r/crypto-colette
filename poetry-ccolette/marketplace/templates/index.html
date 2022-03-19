@@ -1,5 +1,23 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %} Welcome to Ccolette {% endblock %}</h1>
+    <h1>{% block title %} Crypto Colette {% endblock %}</h1>
+    <div class="video" id='vid' >
+        <video autoplay width="800" muted>
+
+    <source src="../static/img/video.mp4"
+            type="video/mp4">
+
+    Sorry, your browser doesn't support embedded videos.
+        </video>
+    </div>
+    <h2 style=" text-align: center; margin-top: 20px;"> Collection Karl Lagarfeld Legacy</h2>
+	<div class="collec"> 
+  	{% for post in posts %}        
+		<a href="{{ url_for('post', post_id=post['id']) }}">
+            <h2>{{ post['title'] }}</h2>
+			<img src={{ post['img'] }} width="100" >
+        </a>
+    {% endfor %}
+	</div>
 {% endblock %}
