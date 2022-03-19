@@ -2,6 +2,13 @@
 
 {% block content %}
     <h2>{% block title %} {{ post['title'] }} {% endblock %}</h2>
-    <span class="badge badge-primary">{{ post['created'] }}</span>
+        <div class="collec"> 
+        {% for post in posts %}        
+            <a href="{{ url_for('post', post_id=post['id']) }}">
+                <h3>{{ post['title'] }}</h3>
+                <img src="{{ post['img'] }}" width="100" />
+            </a>
+        {% endfor %}
+        </div>
     <p>{{ post['content'] }}</p>
 {% endblock %}
