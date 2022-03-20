@@ -1,11 +1,20 @@
 {% extends 'base.html' %}
 
-{% block content %}
-    <h2>{% block title %} Karl Lagerfeld Fashion Legacy Collection {% endblock %}</h2>
+<!--     <h2>{% block title %} Karl Lagerfeld Fashion Legacy Collection {% endblock %}</h2>
         <div class="collec">       
             <a href="{{ url_for('post', post_id=post['id']) }}">
                 <h3>Le Monde</h3>
                 <img src="../static/img/1.jpeg" width="400" />
             </a>
-        </div>
+        </div> -->
+
+{% block content %}
+<div class="collec"> 
+<h2> Karl Lagerfeld Fashion Legacy Collection</h2>
+    <div class="collec">
+        <h3>Le Monde</h3>
+        <img src="../static/img/1.jpeg" width="400" />
+        <img src="../static/img/description NFT.jpeg" width="400" />
+    </div>
+    </div>
 {% endblock %}
