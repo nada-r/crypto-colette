@@ -29,3 +29,7 @@ def index():
 def post(post_id):
     post = get_post(post_id)
     return render_template('nft.html', post=post)
+
+@app.route("/login/", methods=["GET"])
+def login():
+    return render_template("login.html")
