@@ -1,8 +1,8 @@
 # crypto-colette
 
-Go to marketplace folder
+To launch:
 
-type:
+initiate database
 
 export FLASK_APP=app
 
